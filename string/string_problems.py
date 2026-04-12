@@ -85,8 +85,26 @@ class StringProblems:
                 vowels_count += count
             else:
                 consonants_count += count
-                
+
         return vowels_count, consonants_count
+    
+    def longest_substring_without_repeating_characters(self, string):
+        substrings = set()
+        left = 0
+        max_length = 0
+
+        for right in range(len(string)):
+
+            while string[right] in substrings:
+                substrings.remove(string[left])
+                left += 1
+
+            substrings.add(string[right])
+
+            max_len = max(max_length, right - left +1)
+
+        return max_len
+
             
 
 if __name__ == "__main__":
@@ -99,3 +117,4 @@ if __name__ == "__main__":
     print(string_problems.count_vowels("wertfeeeeiiodaserf"))
     print(string_problems.count_vowels_and_consonants("sdfasdfeoiiuaegcxdfg"))
     print(string_problems.count_vowels_and_consonants_without_counter("sdfasdfeoiiuaegcxdfg"))
+    print(string_problems.longest_substring_without_repeating_characters("avcdaaeedddddfrtgyiogds"))
