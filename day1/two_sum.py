@@ -1,4 +1,3 @@
-
 """
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -64,5 +63,3 @@ if __name__ == "__main__":
 
     indices = sol.two_sum_sol2(nums=[8, 2, 7], target=9)
     print(indices)
-
-
