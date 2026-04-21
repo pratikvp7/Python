@@ -18,10 +18,7 @@ class DictProblems:
         print(keys, values)
 
         list(values).insert(1, 'jkl')
-        print(dict1.values())
-
-
-
+        
 if __name__ == '__main__':
     dict = DictProblems()
     dict.dict_operations()
